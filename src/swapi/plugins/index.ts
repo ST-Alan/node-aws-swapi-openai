@@ -1,0 +1,6 @@
+export * from './axiosGetFilms.plugin'
+export * from './axiosGetPeople.plugin'
+export * from './axiosGetPlanet.plugin'
+export * from './axiosGetSpecies.plugin'
+export * from './axiosGetStarShips.plugin'
+export * from './axiosGetVehicles.plugin'
