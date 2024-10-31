@@ -1,6 +1,3 @@
-Voy a mejorar el archivo `.md` proporcionando una estructura más organizada, títulos consistentes y secciones con mejor formato. Aquí está la versión mejorada:
-
-```markdown
 # Documentación de Endpoints
 
 Esta documentación describe cómo consumir los endpoints disponibles para interactuar con SWAPI y OpenAI para la generación y manipulación de datos de películas.
@@ -129,4 +126,7 @@ npm run test:watch
 ```
 
 Este markdown ahora ofrece una presentación más profesional y clara de la información. La estructura jerárquica y el formato mejorados ayudan a los desarrolladores a seguir fácilmente las instrucciones y entender los detalles importantes del servicio y sus restricciones.
+
+# DATO IMPORTANTE
+Las variables de entorno están solo para modo de prueba. Las coloqué para que el reto pueda funcionar usando la API de Open AI
 
