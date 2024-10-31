@@ -1,10 +1,14 @@
 service: swapi
 
 provider:
-  name: aws
-  runtime: nodejs18.x
-  region: us-east-1
-  timeout: 15
+    name: aws
+    runtime: nodejs18.x
+    architecture: arm64
+    stage: production
+    region: us-east-2
+    memorySize: 2048
+    logRetentionInDays: 1
+    timeout: 15
   environment:
     URL_SWAPI_FILMS: https://swapi.py4e.com/api/films/
     URL_SWAPI_PEOPLE: https://swapi.py4e.com/api/people/
