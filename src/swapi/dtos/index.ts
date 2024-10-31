@@ -1,0 +1,6 @@
+export * from './films.dto'
+export * from './people.dto'
+export * from './planet.dto'
+export * from './species.dto'
+export * from './startships.dto'
+export * from './vehicles.dto'
