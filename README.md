@@ -4,11 +4,6 @@ Esta documentación describe cómo consumir los endpoints disponibles para inter
 
 ## Endpoints Disponibles
 
-### Obtener Todos los Films Generados por OpenAI
-
-**GET** `/swapi/films`  
-URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/swapi/films`
-
 ### Obtener Listas de Recursos
 
 Puedes acceder a las listas de diferentes recursos disponibles en SWAPI usando los siguientes endpoints:
@@ -61,6 +56,11 @@ URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/new-film/new-film-with-sawapi-dat
   "emocion": "drama de novela"
 }
 ```
+### Obtener Todos los Films Generados por OpenAI
+
+**GET** `/swapi/films`  
+URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/swapi/films`
+
 
 ## Consideraciones Importantes
 
