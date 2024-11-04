@@ -22,11 +22,12 @@ provider:
     DB_USERNAME: ensolu7_user_test_aws_node
     DB_PASSWORD: '&!8kvE7oOzhH5LyW49H7NFXD^1H5opP4lefS%&6!M2fZ!%izVEiZ&FxuGJo'
     DB_SSLMODE: require
-    OPENAI_API_KEY: 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
+    OPENAI_API_KEY: "Está en el archivo .env que les he pasado"
 
 functions:
   api:
     handler: dist/lambda.handler
+    timeout: 60
     events:
       - http:
           path: /{proxy+}

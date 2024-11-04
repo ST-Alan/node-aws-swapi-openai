@@ -14,6 +14,12 @@ export class SwapiController {
   @ApiResponse({ status: 200, description: 'Información de películas obtenida con éxito.' })
   @ApiResponse({ status: 500, description: 'Error interno del servidor.' })
   async getFilms(@Query() filmsDto: FilmsDto) {
+    if (filmsDto.id < 1 || filmsDto.id  > 7) {
+      return {
+        success: false,
+        message: `El ID de la película ${ filmsDto.id } no está disponible en la API. Solo se permiten idFilm con IDs entre 1 y 7.`,
+      };
+    }
     try {
       const getFilms = await this.swapiService.getFilms(filmsDto);
       return getFilms;
@@ -99,7 +105,7 @@ export class SwapiController {
   }
 
   @Get('films')
-  @ApiOperation({ summary: 'Obtener todas las películas' })
+  @ApiOperation({ summary: 'Obtener todas las películas almacenada en base de datos' })
   @ApiResponse({ status: 200, description: 'Lista de todas las películas obtenida con éxito.' })
   @ApiResponse({ status: 500, description: 'Error interno del servidor.' })
   async getAllFilms() {
