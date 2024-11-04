@@ -1,8 +1,8 @@
 # Disclaimer
-1.- Para hacer esto, he interactuado con el API de OPENAI, como es imposible tener el API en un repositorio público, les comparto el archivo .env \n
-2.- Los audios generados, los pueden ubicar dentro del servidor, en la ruta generated/audios \n
-3.- Para ver el desarrollo con el frontend ir a: https://github.com/ST-Alan/frontend-to-chatbot \n
-4.- Para ver un video del backend y el frontend funcionando: https://www.youtube.com/watch?v=_mj9an_2Qbc \n
+1.- Para hacer esto, he interactuado con el API de OPENAI, como es imposible tener el API en un repositorio público, les comparto el archivo .env <br />
+2.- Los audios generados, los pueden ubicar dentro del servidor, en la ruta generated/audios <br />
+3.- Para ver el desarrollo con el frontend ir a: https://github.com/ST-Alan/frontend-to-chatbot <br />
+4.- Para ver un video del backend y el frontend funcionando: https://www.youtube.com/watch?v=_mj9an_2Qbc <br />
 
 
 # Documentación de Endpoints
