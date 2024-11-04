@@ -4,6 +4,7 @@
 3.- Para ver el desarrollo con el frontend ir a: https://github.com/ST-Alan/frontend-to-chatbot
 4.- Para ver un video del backend y el frontend funcionando: https://www.youtube.com/watch?v=_mj9an_2Qbc
 
+
 # Documentación de Endpoints
 
 Esta documentación describe cómo consumir los endpoints disponibles para interactuar con SWAPI y OpenAI para la generación y manipulación de datos de películas.
@@ -64,6 +65,11 @@ URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/new-film/new-film-with-sawapi-dat
   "emocion": "drama de novela"
 }
 ```
+### Obtener Todos los Films Generados por OpenAI.
+
+**GET** `/swapi/films`  
+URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/swapi/films`
+
 
 ### Crear un audio de una Nueva Historia con OpenAI
 
@@ -159,5 +165,7 @@ npm run test:watch
 Este markdown ahora ofrece una presentación más profesional y clara de la información. La estructura jerárquica y el formato mejorados ayudan a los desarrolladores a seguir fácilmente las instrucciones y entender los detalles importantes del servicio y sus restricciones.
 
 # DATO IMPORTANTE
-Las variables de entorno Están en el archivo .env que les he pasado. Por favor agregar .env al archivo raíz y al archivo serverless.yml en la opción: OPENAI_API_KEY
+
+Las variables de entorno Están en el archivo .env que les he pasado. Por favor agregar .env al archivo raíz y al archivo serverless.yml en la clave: OPENAI_API_KEY
+
 
