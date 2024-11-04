@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { SwapiService } from 'src/swapi/swapi.service';
-import { SwapiDataDto } from './dtos';
-import { createNewFilmOpenAiUseCase } from './use-cases/index'
+import { SwapiDataDto, TextToAudioDto } from './dtos';
+import { createNewFilmOpenAiUseCase, texToAudioUseCase } from './use-cases/index'
 import { NewFilmEntity } from './entity';
 
 import OpenAI from 'openai';
@@ -100,6 +100,16 @@ export class NewFilmService {
       }
 
     }
+
+    async texToAudio(nuevaSagaEscrita:string,voice:string){
+      try {
+        return await texToAudioUseCase(this.openai,{ nuevaSagaEscrita, voice });
+      } catch (error) {
+          console.error('texToAudio - Error:', error);
+          throw new HttpException('texToAudio', HttpStatus.INTERNAL_SERVER_ERROR);
+      }
+        
+  }
 
 
 }

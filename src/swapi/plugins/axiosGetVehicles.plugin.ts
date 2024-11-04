@@ -7,7 +7,6 @@ export const axiosGetVehicles = async (vehiclesDto:VehiclesDto)=>{
         const baseUrl = process.env.URL_SWAPI_VEHICLES;
         const url = vehiclesDto.id ? `${baseUrl}${vehiclesDto.id}` : baseUrl;
         const response = await axios.get(url);
-
         return response.data;
     } catch (error) {
         console.log('axiosGetVehicles - Error:', { error });

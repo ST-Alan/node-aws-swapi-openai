@@ -1,16 +1,14 @@
-Voy a mejorar el archivo `.md` proporcionando una estructura más organizada, títulos consistentes y secciones con mejor formato. Aquí está la versión mejorada:
+# Disclaimer
+1.- Para hacer esto, he interactuado con el API de OPENAI, como es imposible tener el API en un repositorio público, les comparto el archivo .env
+2.- Los audios generados, los pueden ubicar dentro del servidor, en la ruta generated/audios
+3.- Para ver el desarrollo con el frontend ir a: https://github.com/ST-Alan/frontend-to-chatbot
+4.- Para ver un video del backend y el frontend funcionando: https://www.youtube.com/watch?v=_mj9an_2Qbc
 
-```markdown
 # Documentación de Endpoints
 
 Esta documentación describe cómo consumir los endpoints disponibles para interactuar con SWAPI y OpenAI para la generación y manipulación de datos de películas.
 
 ## Endpoints Disponibles
-
-### Obtener Todos los Films Generados por OpenAI
-
-**GET** `/swapi/films`  
-URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/swapi/films`
 
 ### Obtener Listas de Recursos
 
@@ -49,6 +47,8 @@ Para obtener un recurso específico, añade el parámetro `id` en los siguientes
 
 Para generar una nueva historia utilizando OpenAI y recursos de SWAPI, y guardarla en la base de datos:
 
+La url: https://l9hcg9cs-3000.use2.devtunnels.ms/ es la generada por el vscode, esta se cambia según la que genere el servidor
+
 **POST** `/new-film/new-film-with-sawapi-data`  
 URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/new-film/new-film-with-sawapi-data`
 
@@ -64,6 +64,34 @@ URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/new-film/new-film-with-sawapi-dat
   "emocion": "drama de novela"
 }
 ```
+
+### Crear un audio de una Nueva Historia con OpenAI
+
+Para generar una nueva historia utilizando OpenAI y recursos de SWAPI, y guardarla en la base de datos:
+
+**POST** `/new-film/text-to-audio`  
+URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/new-film/text-to-audio`
+
+**Body Example:**
+```json
+{
+  "idFilm": 5,
+  "idPerson": "33",
+  "idPlanet": "9",
+  "idSpecies": "6",
+  "idStarship": "5",
+  "idVehicle": "7",
+  "emocion": "drama de novela",
+  "selectedVoice": "echo"
+}
+```
+
+### Obtener Todos los Films Generados por OpenAI
+
+Esta URL es se va a cambiar por la que genere aws: https://l9hcg9cs-3000.use2.devtunnels.ms
+
+**GET** `/swapi/films`  
+URL: `https://l9hcg9cs-3000.use2.devtunnels.ms/swapi/films`
 
 ## Consideraciones Importantes
 
@@ -129,4 +157,7 @@ npm run test:watch
 ```
 
 Este markdown ahora ofrece una presentación más profesional y clara de la información. La estructura jerárquica y el formato mejorados ayudan a los desarrolladores a seguir fácilmente las instrucciones y entender los detalles importantes del servicio y sus restricciones.
+
+# DATO IMPORTANTE
+Las variables de entorno Están en el archivo .env que les he pasado. Por favor agregar .env al archivo raíz y al archivo serverless.yml en la opción: OPENAI_API_KEY
 
