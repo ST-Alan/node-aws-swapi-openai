@@ -135,8 +135,9 @@ Si se solicita un recurso desde `/swapi/get-starships` o `/swapi/get-vehicles` c
 1. Instalar `awscli`.
 2. Ejecutar `aws configure` y ajustar las credenciales.
 3. Revisar y modificar, si es necesario, la configuración de región en el archivo `serverless.yml`, línea 6.
-4. Desplegar usando: `serverless deploy`
-5. Para ver offline:
+4. npm build
+5. Desplegar usando: `serverless deploy`
+6. Para ver offline:
 ```bash
 serverless offline
 ```
