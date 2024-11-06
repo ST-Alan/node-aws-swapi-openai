@@ -20,9 +20,9 @@ provider:
     DB_PORT: 3306
     DB_NAME: ensolu7_aws_node_backend
     DB_USERNAME: ensolu7_user_test_aws_node
-    DB_PASSWORD: '&!8kvE7oOzhH5LyW49H7NFXD^1H5opP4lefS%&6!M2fZ!%izVEiZ&FxuGJo'
+    DB_PASSWORD:
     DB_SSLMODE: require
-    OPENAI_API_KEY: "Está en el archivo .env que les he pasado"
+    OPENAI_API_KEY:
 
 functions:
   api:
