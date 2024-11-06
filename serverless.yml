@@ -8,7 +8,7 @@ provider:
     region: us-east-2
     memorySize: 2048
     logRetentionInDays: 1
-    timeout: 15
+    timeout: 900
   environment:
     URL_SWAPI_FILMS: https://swapi.py4e.com/api/films/
     URL_SWAPI_PEOPLE: https://swapi.py4e.com/api/people/
