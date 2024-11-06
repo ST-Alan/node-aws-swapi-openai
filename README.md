@@ -166,7 +166,31 @@ npm run test:watch
 Este markdown ahora ofrece una presentación más profesional y clara de la información. La estructura jerárquica y el formato mejorados ayudan a los desarrolladores a seguir fácilmente las instrucciones y entender los detalles importantes del servicio y sus restricciones.
 
 # DATO IMPORTANTE
-
+## Variables 
 Las variables de entorno Están en el archivo .env que les he pasado. Por favor agregar .env al archivo raíz y al archivo serverless.yml en la clave: OPENAI_API_KEY
+## Audios
+Para escuchar y generar los audios en local:
+
+Bien sea con npm:
+```bash
+npm run star:dev
+```
+Con serverless en local
+```bash
+sls offline
+```
+
+### Debe cambiar estas líneas en: src/new-film/use-cases/textToAudio.use-cases.ts
+
+Debe descomentar la línea 25 y comentar la línea 26
+  // const folderPath = path.resolve(__dirname, '../../../generated/audios/') //Para correr en local
+  const folderPath = '/tmp'; // Para correr en AWS
+
+
+### Si desea trabajar con AWS en la nube(Lamda), este archivo: src/new-film/use-cases/textToAudio.use-cases.ts
+
+Debe estar tal cual:
+// const folderPath = path.resolve(__dirname, '../../../generated/audios/') //Para correr en local
+  const folderPath = '/tmp'; // Para correr en AWS
 
 
